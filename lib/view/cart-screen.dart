@@ -77,122 +77,6 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  Widget buildTotalPrice() {
-    return Row(
-      children: [
-        Container(
-          height: 240.h,
-          width: 360.w,
-          decoration: BoxDecoration(
-            color: AppColors.secondaryColor,
-            borderRadius: BorderRadius.circular(15.r),
-          ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Order Summary',
-                  style: pStyleBlack16600,
-                ),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Items',
-                      style: pStyleBlack14600,
-                    ),
-                    Text(
-                      '\$ 1000',
-                      style: pStyleBlack12600,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Subtotal',
-                      style: pStyleBlack14600,
-                    ),
-                    Text(
-                      '\$ 1000',
-                      style: pStyleBlack12600,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Discount',
-                      style: pStyleBlack14600,
-                    ),
-                    Text(
-                      '\$ 1000',
-                      style: pStyleBlack12600,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Delivery Charges',
-                      style: pStyleBlack14600,
-                    ),
-                    Text(
-                      '\$ 1000',
-                      style: pStyleBlack12600,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.h),
-                Divider(),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Total',
-                      style: pStyleBlack14600,
-                    ),
-                    Text(
-                      '\$ 5000',
-                      style: pStyleBlack12600,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.h),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget buildCheckoutButton() {
-    return Container(
-      height: 50.h,
-      decoration: BoxDecoration(
-        color: AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(30.r),
-      ),
-      child: Center(
-        child: Text(
-          'Checkout',
-          style: pStyleBlack14600.copyWith(color: AppColors.whiteColor),
-        ),
-      ),
-    );
-  }
 }
 
 class CartItem extends StatelessWidget {
@@ -331,4 +215,119 @@ class CartItem extends StatelessWidget {
       ],
     );
   }
+}
+Widget buildTotalPrice() {
+  return Row(
+    children: [
+      Container(
+        height: 240.h,
+        width: 360.w,
+        decoration: BoxDecoration(
+          color: AppColors.secondaryColor,
+          borderRadius: BorderRadius.circular(15.r),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Order Summary',
+                style: pStyleBlack16600,
+              ),
+              SizedBox(height: 10.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Items',
+                    style: pStyleBlack14600,
+                  ),
+                  Text(
+                    '\$ 1000',
+                    style: pStyleBlack12600,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Subtotal',
+                    style: pStyleBlack14600,
+                  ),
+                  Text(
+                    '\$ 1000',
+                    style: pStyleBlack12600,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Discount',
+                    style: pStyleBlack14600,
+                  ),
+                  Text(
+                    '\$ 1000',
+                    style: pStyleBlack12600,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Delivery Charges',
+                    style: pStyleBlack14600,
+                  ),
+                  Text(
+                    '\$ 1000',
+                    style: pStyleBlack12600,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.h),
+              Divider(),
+              SizedBox(height: 10.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total',
+                    style: pStyleBlack14600,
+                  ),
+                  Text(
+                    '\$ 5000',
+                    style: pStyleBlack12600,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.h),
+            ],
+          ),
+        ),
+      ),
+    ],
+  );
+}
+Widget buildCheckoutButton() {
+  return Container(
+    height: 50.h,
+    decoration: BoxDecoration(
+      color: AppColors.primaryColor,
+      borderRadius: BorderRadius.circular(30.r),
+    ),
+    child: Center(
+      child: Text(
+        'Checkout',
+        style: pStyleBlack14600.copyWith(color: AppColors.whiteColor),
+      ),
+    ),
+  );
 }

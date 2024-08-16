@@ -17,5 +17,8 @@ class AppImages extends AssetImage {
 
 //Svg images
   static const String uploadLogo = '$_iconPath/UploadLogo.svg';
+  static const String cash = '$_iconPath/Cash.svg';
+  static const String creditCard = '$_iconPath/CreditCard.svg';
+  static const String paypal = '$_iconPath/Paypal.svg';
 
 }

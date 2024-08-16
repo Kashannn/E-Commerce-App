@@ -27,6 +27,11 @@ final TextStyle pStyleBlack14600 = GoogleFonts.poppins(
   color: AppColors.blackColor,
   fontWeight: FontWeight.w600,
 );
+final TextStyle pStyleBlack14400 = GoogleFonts.poppins(
+  fontSize: 14.sp,
+  color: AppColors.blackColor,
+  fontWeight: FontWeight.w400,
+);
 final TextStyle pStyleBlack16600 = GoogleFonts.poppins(
   fontSize: 16.sp,
   color: AppColors.blackColor,

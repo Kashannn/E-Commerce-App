@@ -87,9 +87,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                        onTap: (){
-                          Get.to(DetailScreen());
-                        },
+                      onTap: () {
+                        Get.to(DetailScreen());
+                      },
                       child: buildProductPlusCard(
                         image: AppImages.shoes,
                         title: 'Nike Shoes',
