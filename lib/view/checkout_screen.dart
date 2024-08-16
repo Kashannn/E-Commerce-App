@@ -1,3 +1,4 @@
+import 'package:ecommerce/view/order_history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -110,23 +111,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 ),
                 SizedBox(height: 20.h),
                 Row(
-                  children: [
-                    SvgPicture.asset(
-                      AppImages.paypal,
-                      height: 30.h,
-                      width: 30.w,
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                    Text(
-                      'Paypal',
-                      style: pStyleBlack14400,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20.h),
-                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(children: [
@@ -155,19 +139,58 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 ),
                 SizedBox(height: 20.h),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset(
-                      AppImages.cash,
-                      height: 30.h,
-                      width: 30.w,
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                    Text(
-                      'Cash',
-                      style: pStyleBlack14400,
-                    ),
+                    Row(children: [
+                      SvgPicture.asset(
+                        AppImages.paypal,
+                        height: 30.h,
+                        width: 30.w,
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Text(
+                        'Paypal',
+                        style: pStyleBlack14400,
+                      ),
+                    ]),
+                    CircleAvatar(
+                      backgroundColor: AppColors.secondaryColor,
+                      child: Icon(
+                        Icons.check,
+                        size: 15.sp,
+                      ),
+                      radius: 15.r,
+                    )
+                  ],
+                ),
+                SizedBox(height: 20.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(children: [
+                      SvgPicture.asset(
+                        AppImages.cash,
+                        height: 30.h,
+                        width: 30.w,
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Text(
+                        'Cash',
+                        style: pStyleBlack14400,
+                      ),
+                    ]),
+                    CircleAvatar(
+                      backgroundColor: AppColors.secondaryColor,
+                      child: Icon(
+                        Icons.check,
+                        size: 15.sp,
+                      ),
+                      radius: 15.r,
+                    )
                   ],
                 ),
                 SizedBox(height: 20.h),
@@ -190,7 +213,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 SizedBox(height: 20.h),
                 GestureDetector(
                   onTap: () {
-                    Get.to(() => const CheckoutScreen());
+                    Get.to(() => const OrderHistory());
                   },
                   child: buildCheckoutButton(),
                 ),
